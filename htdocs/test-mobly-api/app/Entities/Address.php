@@ -16,11 +16,11 @@ class Address extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'userId');
+        return $this->belongsTo(User::class, 'userId', 'id');
     }
 
     public function geo()
     {
-        return $this->hasOne(Geo::class, 'addressId');
+        return $this->hasOne(Geo::class, 'addressId', 'id');
     }
 }

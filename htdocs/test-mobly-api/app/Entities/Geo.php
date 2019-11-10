@@ -16,6 +16,6 @@ class Geo extends Model
 
     public function address()
     {
-        return $this->belongsTo(Address::class, 'addressId');
+        return $this->belongsTo(Address::class, 'addressId', 'id');
     }
 }

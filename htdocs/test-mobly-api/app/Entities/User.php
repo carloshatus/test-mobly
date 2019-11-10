@@ -16,11 +16,16 @@ class User extends Model
 
     public function address()
     {
-        return $this->belongsTo(Address::class, 'userId');
+        return $this->hasOne(Address::class, 'userId', 'id');
     }
 
     public function company()
     {
-        return $this->belongsTo(Company::class, 'userId');
+        return $this->hasOne(Company::class, 'userId', 'id');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Company::class, 'userId', 'id');
     }
 }

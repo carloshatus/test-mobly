@@ -26,6 +26,6 @@ class User extends Model
 
     public function posts()
     {
-        return $this->hasMany(Company::class, 'userId', 'id');
+        return $this->hasMany(Post::class, 'userId', 'id');
     }
 }

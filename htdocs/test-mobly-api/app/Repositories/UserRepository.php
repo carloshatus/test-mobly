@@ -113,6 +113,12 @@ class UserRepository
         return $user;
     }
 
+    public function getPosts($id)
+    {
+        $posts = User::find($id)->posts->all();
+        return $posts;
+    }
+
     public function delete($id)
     {
         try {

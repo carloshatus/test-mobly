@@ -39,6 +39,12 @@ class UserService
         return $user;
     }
 
+    public function getPosts($id)
+    {
+        $user = $this->userRepository->getPosts($id);
+        return $user;
+    }
+
     public function delete($id)
     {
         $deleted = $this->userRepository->delete($id);

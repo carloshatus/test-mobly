@@ -58,7 +58,7 @@ services:
     ports:
       - "${MYSQL_PORT}:${MYSQL_PORT}"
     volumes:
-      - mysql_data:${MYSQL_DATA_DIR}
+      - mysql_data_1:${MYSQL_DATA_DIR}
     environment:
       PORT: ${MYSQL_PORT}
       MYSQL_USER: ${MYSQL_USER}
@@ -69,7 +69,7 @@ services:
       - srvweb-network
 
 volumes:
-  mysql_data:
+  mysql_data_1:
     driver: local
 
 networks:

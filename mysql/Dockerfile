@@ -1,4 +1,4 @@
-FROM mysql:latest
+FROM mysql:5.6
 
 LABEL Carlos Hatus <carlos.hatus@hotmail.com>
 

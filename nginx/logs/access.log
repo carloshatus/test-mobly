@@ -96,3 +96,4 @@
 172.20.0.1 - - [10/Nov/2019:21:56:39 +0000] "GET /js/chunk-vendors.e9904408.js HTTP/1.1" 304 0 "http://localhost:9090/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" "-"
 172.20.0.1 - - [10/Nov/2019:21:56:39 +0000] "GET /img/logo.82b9c7a5.png HTTP/1.1" 304 0 "http://localhost:9090/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" "-"
 172.20.0.1 - - [10/Nov/2019:21:56:44 +0000] "GET / HTTP/1.1" 200 2438 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" "-"
+172.20.0.1 - - [10/Nov/2019:21:59:43 +0000] "GET /api/users/1/posts HTTP/1.1" 200 2437 "-" "insomnia/7.0.3" "-"

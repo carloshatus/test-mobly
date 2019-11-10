@@ -115,7 +115,7 @@ class UserRepository
 
     public function getPosts($id)
     {
-        $posts = User::find($id)->posts->all();
+        $posts = User::find($id)->posts;
         return $posts;
     }
 

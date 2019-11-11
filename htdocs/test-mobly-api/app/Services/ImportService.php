@@ -23,17 +23,17 @@ class ImportService
                 ]);
                 try {
                     $responseUsers = $http->get('/users');
-                    $responseUsers = json_decode($responseUsers->getBody());
+                    $responseUsers = json_decode($responseUsers->getBody(), true);
                     $responsePosts = $http->get('/posts');
-                    $responsePosts = json_decode($responsePosts->getBody());
+                    $responsePosts = json_decode($responsePosts->getBody(), true);
                 } catch (RequestException $e) {
                     throw $e;
                 }
                 foreach ($responseUsers as $user) {
                     $newUser = $userRepository->create($user);
                     foreach ($responsePosts as $post) {
-                        if ($post->userId == $user->id) {
-                            $post->userId = $newUser->id;
+                        if ($post['userId'] == $user['id']) {
+                            $post['userId'] = $newUser->id;
                             $postRepository->create($post);
                         }
                     }

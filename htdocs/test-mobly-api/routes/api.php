@@ -21,3 +21,7 @@ Route::group(['prefix' => 'users'], function () {
     Route::delete('/{id}', ['uses' => 'Api\UserController@delete']);
     Route::put('/{id}', ['uses' => 'Api\UserController@update']);
 });
+
+Route::group(['prefix' => 'import'], function () {
+    Route::get('/', ['uses' => 'Api\ImportController@import']);
+});

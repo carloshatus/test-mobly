@@ -49,6 +49,13 @@ services:
     networks:
       - srvweb-network
 
+  composer:
+    container_name: composer
+    restart: always
+    build:
+      context: ./htdocs
+      dockerfile: Dockerfile
+
   mysql:
     container_name: ${MYSQL_CONNECTION_NAME}
     restart: always

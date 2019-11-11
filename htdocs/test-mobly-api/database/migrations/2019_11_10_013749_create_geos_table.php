@@ -14,11 +14,11 @@ class CreateGeosTable extends Migration
     public function up()
     {
         Schema::create('geos', function (Blueprint $table) {
-            $table->bigInteger('addressId')->unsigned()->nullable();
+            $table->bigInteger('addressId')->unsigned();
             $table->foreign('addressId')->references('id')->on('addresses');
             $table->bigIncrements('id');
-            $table->string('lat');
-            $table->string('lng');
+            $table->string('lat')->nullable();
+            $table->string('lng')->nullable();
             $table->timestamps();
         });
     }

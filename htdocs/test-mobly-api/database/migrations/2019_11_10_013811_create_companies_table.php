@@ -14,12 +14,12 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->bigInteger('userId')->unsigned()->nullable();
+            $table->bigInteger('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('users');
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('catchPhrase');
-            $table->string('bs');
+            $table->string('name')->nullable();
+            $table->string('catchPhrase')->nullable();
+            $table->string('bs')->nullable();
             $table->timestamps();
         });
     }

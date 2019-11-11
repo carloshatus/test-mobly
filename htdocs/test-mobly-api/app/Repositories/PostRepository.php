@@ -11,9 +11,9 @@ class PostRepository
     {
         try {
             $post = [
-                'userId' => $input->userId,
-                'title' => $input->title,
-                'body' => $input->body
+                'userId' => $input['userId'],
+                'title' => $input['title'],
+                'body' => $input['body']
             ];
             $newPost = Post::create($post);
             return $this->getById($newPost->id);
@@ -27,9 +27,9 @@ class PostRepository
         try {
             $postCurrent = Post::find($id);
             $post = [
-                'userId' => $input->userId,
-                'title' => $input->title,
-                'body' => $input->body
+                'userId' => $input['userId'],
+                'title' => $input['title'],
+                'body' => $input['body']
             ];
             $postCurrent->update($post);
             $this->getById($id);

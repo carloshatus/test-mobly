@@ -48,6 +48,11 @@ Instale as dependências:
 composer install
 ```
 
+Realize a migração do banco de dados:
+```
+php artisan migrate
+```
+
 Atribua permissão de leitura e escrita a pasta `storage`:
 ```
 chmod -R 777 /storage/
